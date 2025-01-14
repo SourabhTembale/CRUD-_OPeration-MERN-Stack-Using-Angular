@@ -1,0 +1,52 @@
+<div class="container">
+  @if(editUserid){
+    <h2>Edit User</h2>
+  }
+  @else{
+    
+    <h2>Add User</h2>
+  }
+    <form [formGroup] = "userForm">
+      <div class="form-row">
+        <mat-form-field class="w-full">
+          <mat-label>Name</mat-label>
+          <input type="text" matInput formControlName="name">
+        </mat-form-field>
+      </div>
+      <div class="form-row">
+        <mat-form-field class="w-full">
+          <mat-label>Email</mat-label>
+          <input type="email" matInput formControlName="email">
+        </mat-form-field>
+      </div>
+      <div class="form-row">
+        <mat-form-field class="w-full">
+          <mat-label>Age</mat-label>
+          <input type="number" matInput formControlName="age">
+        </mat-form-field>
+      </div>
+      <div class="form-row">
+        <mat-form-field class="w-full">
+          <mat-label>Address</mat-label>
+          <input type="text" matInput formControlName="address">
+        </mat-form-field>
+      </div>
+      <div class="form-row">
+        <mat-form-field class="w-full">
+          <mat-label>Password</mat-label>
+          <input type="password" matInput formControlName="password">
+        </mat-form-field>
+      </div>
+      <div class="form-row">
+        @if(editUserid){
+          <button class="add-user-btn" (click)='updateUser()'>Edit User</button>
+      
+        }
+        @else{
+          <button class="add-user-btn" (click)='addUser()'>Add User</button>
+      
+        }
+        
+      </div>
+    </form>
+  </div>

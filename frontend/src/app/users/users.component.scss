@@ -1,0 +1,80 @@
+/* Apply basic styles to the table */
+.container{
+  display: table;
+  width: 80%;
+  padding:20px;
+  margin-left: 100px;
+}
+.user-table {
+  width: 100%;
+  justify-content: center;
+  border-collapse: collapse;
+}
+.head{
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: space-between;
+}
+/* Style the table header */
+.table-header {
+  background-color: #f1f1f1;
+  font-weight: bold;
+  text-align: left;
+}
+
+.table-header th {
+  padding: 0 10px;
+  border: 1px solid #ddd;
+}
+
+/* Style table data rows */
+.table-row {
+  height: 50px;
+}
+
+.table-row td {
+  padding: 0 10px;
+  border: 1px solid #ddd;
+}
+
+/* Style alternate table row background color */
+.table-row:nth-child(even) {
+  background-color: #f7f7f7;
+}
+
+/* Style the shadow effect for the table container */
+.shadow {
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.1), 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Style buttons based on functionality */
+.add-user-button,
+.edit-button,
+.delete-button {
+  padding: 8px 16px;
+  border: none;
+  margin: 8px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.add-user-button {
+  background-color: #00bbff; /* Green */
+  color: white;
+}
+
+.edit-button {
+  background-color: #f44336; /* Red */
+  color: white;
+}
+
+.delete-button {
+  background-color: #3f51b5; /* Blue */
+  color: white;
+}
+
+.add-user-button:hover,
+.edit-button:hover,
+.delete-button:hover {
+  opacity: 0.8;
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Users Data</title>
+</head>
+<body>
+  <div class="shadow overflow-x-auto p-4 border w-full h-screen">
+    <div class="flex head">
+      <h2 class="text-xl font-semibold">Users Data</h2>
+      <button class="add-user-button" routerLink="/users/add">Add User</button>
+    </div>
+    <div class="container">
+    <table class="user-table">
+      <thead>
+        <tr class="table-header">
+          <th>Name</th>
+          <th>Email</th>
+          <th>Age</th>
+          <th>Address</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for (user of users; track $index) {
+          <tr class="table-row">
+            <td class="table-data">{{ user.name }}</td>
+            <td class="table-data">{{ user.email }}</td>
+            <td class="table-data">{{ user.age }}</td>
+            <td class="table-data">{{ user.address }}</td>
+            <td>
+              <button class="edit-button" [routerLink]="'/users/'+user._id">Edit</button>
+              <button mat-raised-button  class="delete-button" (click)="delete(user._id!)">Delete</button>
+            </td>
+          </tr>
+        }
+      </tbody>
+    </table>
+  </div>
+  </div>
+</body>
+</html>
